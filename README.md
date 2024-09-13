@@ -12,7 +12,7 @@ conda activate HLAD
 ```
 
 ### Step 2: Install SMARTS Simulator
-Secondly, install the SMARTS simulator, ensuring it is compatible with version 2.0.x. Follow the installation instructions provided in the official repository.
+Secondly, install the [SMARTS](https://github.com/huawei-noah/SMARTS "SMARTS") simulator, ensuring it is compatible with version 2.0.x. Follow the installation instructions provided in the official repository.
 
 ### Step 3: Install Dependencies
 Clone the repository and navigate into the project directory:
