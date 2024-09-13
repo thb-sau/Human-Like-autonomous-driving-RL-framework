@@ -1,0 +1,7 @@
+encoder:
+  patch_size: 8
+  n_layer: 2  # transformer 的层数
+  n_head: 2  # transformer 的 head 数
+  dim: 256
+  dim_head: 256
+  mlp_dim: 512

@@ -1,0 +1,96 @@
+LHRL:
+  seed: 61
+  train_headless: True
+  eval_headless: False  # If False, enables Envision display.
+  max_episode_steps: 400
+  reward_mode: intensive
+
+  # left_expert_data_name: merge1_10.hdf5
+  # encoder_model_path: /home/wsl/pythonWork/paper_one/log/encoder/cheakpoint/obs_encoder.pth
+
+  buffer_size: 200_000
+  batch_size: 32
+ 
+  lr: 0.0002
+  gamma: 0.99
+  tau: 0.2
+  gradient_steps: 1
+  alpha: 0.2
+
+  steps: 100_000
+  eval_freq: 100
+  eval_episode: 10
+  save_interval: 100
+  discriminator_mode: SCA  # SCA: Social Coordination Awareness ofAV  or default
+
+
+SAC:
+  # Environment
+  seed: 511
+  train_headless: True
+  eval_headless: False  # If False, enables Envision display.
+  max_episode_steps: 400
+  reward_mode: intensive
+
+  # encoder_model_path: /home/wsl/pythonWork/paper_one/log/encoder/cheakpoint/obs_encoder.pth
+
+  buffer_size: 200_000
+  batch_size: 32
+  lr: 0.0001
+  gamma: 0.99
+  tau: 0.2
+  gradient_steps: 1
+
+  steps: 200_000
+  eval_freq: 100
+  eval_episode: 10
+  save_interval: 100
+
+
+PPO:
+  # Environment
+  seed: 511
+  train_headless: True
+  eval_headless: False  # If False, enables Envision display.
+  max_episode_steps: 400
+  reward_mode: intensive
+
+  # encoder_model_path: /home/wsl/pythonWork/paper_one/log/encoder/cheakpoint/obs_encoder.pth
+  buffer_size: 1000
+  batch_size: 64
+  lr: 0.0003
+  gamma: 0.95
+  gradient_steps: 2
+
+  clip_param: 0.2
+  max_grad_norm: 0.5
+
+  steps: 200_000
+  eval_freq: 100
+  eval_episode: 10
+  save_interval: 100
+
+GAIL:
+  # Environment
+  seed: 511
+  train_headless: True
+  eval_headless: False  # If False, enables Envision display.
+  max_episode_steps: 400
+  reward_mode: intensive
+
+  # expert_data_name: radical_left_t1_40.hdf5
+  # encoder_model_path: /home/wsl/pythonWork/paper_one/log/encoder/cheakpoint/obs_encoder.pth
+  
+  buffer_size: 1000
+  batch_size: 64
+  lr: 0.0003
+  gamma: 0.95
+  gradient_steps: 2
+
+  clip_param: 0.2
+  max_grad_norm: 0.5
+
+  steps: 200_000
+  eval_freq: 100
+  eval_episode: 10
+  save_interval: 100
